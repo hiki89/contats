@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router';
 import AddContact from './pages/AddContact.vue';
 import Contacts from './pages/Contacts.vue';
+console.log(Contacts);
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false
@@ -10,6 +11,7 @@ Vue.config.productionTip = false
 const routes = [
   {path: '/', redirect:'contacts'},
   {path: '/contacts', component: Contacts},
+  {path: '/contacts/:id', component: Contacts, name: 'contact-details'},
   {path: '/add-contact', component: AddContact},
 ];
 
